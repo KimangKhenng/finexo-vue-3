@@ -22,7 +22,7 @@ export default {
   },
   //
   computed: {
-    ...mapState(useRepositoryStore, ["courses"]),
+    ...mapState(useRepositoryStore, ["courses", "usernames", "repos"]),
   },
   methods: {
     ...mapActions(useRepositoryStore, ["getAllRepositories"]),
