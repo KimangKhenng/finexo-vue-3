@@ -14,9 +14,13 @@ export default {
     };
   },
   async created() {
-    const url = "/v1/courses/" + this.$route.params.id;
-    const response = await axios.get(url);
-    this.course = response.data;
+    try {
+      const url = "/v1/courses/" + this.$route.params.id;
+      const response = await axios.get(url);
+      this.course = response.data;
+    } catch (error) {
+      console.log(error.message);
+    }
   },
   methods: {
     goHome() {
