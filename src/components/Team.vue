@@ -31,15 +31,15 @@ export default {
       members: [],
     };
   },
-  async created() {
-    const token = localStorage.getItem("accessToken");
-    const response = await axios.get("/v1/users", {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    });
-    this.members = response.data;
-  },
+  // async created() {
+  //   const token = localStorage.getItem("accessToken");
+  //   const response = await axios.get("/v1/users", {
+  //     headers: {
+  //       authorization: `Bearer ${token}`,
+  //     },
+  //   });
+  //   this.members = response.data;
+  // },
   methods: {
     handleCustomEvent(data) {
       console.log(data);

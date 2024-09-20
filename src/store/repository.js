@@ -7,8 +7,13 @@ const useRepositoryStore = defineStore('repository', {
     }),
     actions: {
         async getAllRepositories() {
-            const response = await axios.get('https://api.github.com/users/tfd-ed/repos')
-            console.log(response.data)
+            try {
+                const { data } = await axios.get('https://api.github.com/users/tfd-ed/repos')
+                console.log(data)
+                this.repositories = data
+            } catch (err) {
+                console.log(err.message)
+            }
         }
     }
 })

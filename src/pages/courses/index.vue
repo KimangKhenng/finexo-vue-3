@@ -52,10 +52,10 @@ export default {
       courses: [],
     };
   },
-  async created() {
-    const response = await axios.get("/v1/courses");
-    const courses = response.data;
-    this.courses = courses;
-  },
+  // async created() {
+  //   const response = await axios.get("/v1/courses");
+  //   const courses = response.data;
+  //   this.courses = courses;
+  // },
 };
 </script>

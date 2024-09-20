@@ -13,11 +13,11 @@ export default {
       course: "",
     };
   },
-  async created() {
-    const url = "/v1/courses/" + this.$route.params.id;
-    const response = await axios.get(url);
-    this.course = response.data;
-  },
+  // async created() {
+  //   const url = "/v1/courses/" + this.$route.params.id;
+  //   const response = await axios.get(url);
+  //   this.course = response.data;
+  // },
   methods: {
     goHome() {
       this.$router.push("/");

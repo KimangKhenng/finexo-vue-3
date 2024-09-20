@@ -1,11 +1,18 @@
 <template>
   <p>Hello World</p>
-  <button @click="getAllRepositories">Get repo</button>
 </template>
 <script>
 import useRepositoryStore from "@/store/repository.js";
-import { mapActions } from "pinia";
+import { mapActions, mapState } from "pinia";
 export default {
+  created() {
+    this.getAllRepositories();
+    console.log(this.repositories);
+  },
+  //
+  computed: {
+    ...mapState(useRepositoryStore, "repositories"),
+  },
   methods: {
     ...mapActions(useRepositoryStore, ["getAllRepositories"]),
   },
