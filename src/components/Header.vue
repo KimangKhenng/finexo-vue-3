@@ -20,39 +20,15 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li class="nav-item" :class="{ active: $route.path == '/' }">
-              <router-link to="/" class="nav-link"
-                >Home <span class="sr-only">(current)</span></router-link
-              >
-            </li>
-            <li class="nav-item" :class="{ active: $route.path == '/courses' }">
-              <router-link to="/courses" class="nav-link"
-                >Courses <span class="sr-only">(current)</span></router-link
-              >
-            </li>
-            <li class="nav-item" :class="{ active: $route.path == '/about' }">
-              <router-link to="/about" class="nav-link"> About</router-link>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="service.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="why.html">Why Us</a>
-            </li>
-            <li class="nav-item">
-              <router-link
-                class="nav-link"
-                to="/team"
-                :class="{ active: $route.path == '/team' }"
-                >Team</router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link
-                class="nav-link"
-                to="/repos"
-                :class="{ active: $route.path == '/repos' }"
-                >Repos</router-link
+            <li
+              v-for="(item, index) in navs"
+              class="nav-item"
+              :key="index"
+              :class="{ active: $route.path == item.path }"
+            >
+              <router-link :to="item.path" class="nav-link"
+                >{{ item.name }}
+                <span class="sr-only">(current)</span></router-link
               >
             </li>
             <li class="nav-item">
@@ -71,3 +47,34 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      navs: [
+        {
+          name: "Home",
+          path: "/",
+        },
+        {
+          name: "Service",
+          path: "/service",
+        },
+        {
+          name: "Courses",
+          path: "/courses",
+        },
+        {
+          name: "Team",
+          path: "/team",
+        },
+        {
+          name: "Register",
+          path: "/register",
+        },
+      ],
+    };
+  },
+};
+</script>

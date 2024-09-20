@@ -10,6 +10,7 @@ import Course from "@/pages/courses/index.vue"
 import CoursePage from '@/pages/courses/CoursePage.vue'
 import Login from "@/pages/login.vue"
 import Repository from '@/pages/Repository.vue'
+import Register from '@/pages/Register.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -24,7 +25,8 @@ const routes = [
     { path: '/courses', component: Course },
     { path: '/courses/:id', component: CoursePage },
     { path: '/login', component: Login },
-    { path: '/repos', component: Repository }
+    { path: '/repos', component: Repository },
+    { path: '/register', component: Register }
 ]
 
 const router = createRouter({
