@@ -2,9 +2,9 @@
   <header class="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.html">
+        <router-link class="navbar-brand" to="/">
           <span> Finexo </span>
-        </a>
+        </router-link>
 
         <button
           class="navbar-toggler"
@@ -45,6 +45,14 @@
                 to="/team"
                 :class="{ active: $route.path == '/team' }"
                 >Team</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                to="/repos"
+                :class="{ active: $route.path == '/repos' }"
+                >Repos</router-link
               >
             </li>
             <li class="nav-item">
