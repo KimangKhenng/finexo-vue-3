@@ -27,7 +27,7 @@
               :class="{ active: $route.path == item.path }"
             >
               <router-link :to="item.path" class="nav-link"
-                >{{ item.name }}
+                >{{ $t(item.name) }}
                 <span class="sr-only">(current)</span></router-link
               >
             </li>
@@ -35,6 +35,9 @@
               <router-link class="nav-link" to="/login">
                 <i class="fa fa-user" aria-hidden="true"></i> Login</router-link
               >
+            </li>
+            <li class="nav-item">
+              <button @click="changeLanguage">Change Language</button>
             </li>
             <form class="form-inline">
               <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
@@ -54,27 +57,36 @@ export default {
     return {
       navs: [
         {
-          name: "Home",
+          name: "home",
           path: "/",
         },
         {
-          name: "Service",
+          name: "services",
           path: "/service",
         },
         {
-          name: "Courses",
+          name: "courses",
           path: "/courses",
         },
         {
-          name: "Team",
+          name: "team",
           path: "/team",
         },
         {
-          name: "Register",
+          name: "register",
           path: "/register",
         },
       ],
     };
+  },
+  methods: {
+    changeLanguage() {
+      if (this.$i18n.locale == "en") {
+        this.$i18n.locale = "khm";
+      } else {
+        this.$i18n.locale = "en";
+      }
+    },
   },
 };
 </script>
