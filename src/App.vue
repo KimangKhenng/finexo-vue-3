@@ -8,6 +8,7 @@
   <Footer />
 </template>
 ,<script>
+import NotFound from "@/components/NotFound.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default {
