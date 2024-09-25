@@ -15,7 +15,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Crypto <br />
+                      Crypto v2 <br />
                       {{ $t("home") }}
                     </h1>
                     <p>
