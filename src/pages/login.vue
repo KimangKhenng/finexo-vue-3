@@ -12,7 +12,7 @@
       <div><ErrorMessage name="email" class="alert alert-danger" /></div>
 
       <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
+        We'll never share your email with anyone else.2
       </div>
     </div>
     <div class="mb-3">
