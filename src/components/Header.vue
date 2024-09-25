@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
         <router-link class="navbar-brand" to="/">
-          <span> Finexo </span>
+          <span> {{ title }} </span>
         </router-link>
 
         <button
@@ -77,6 +77,7 @@ export default {
           path: "/register",
         },
       ],
+      title: process.env.VUE_APP_TITLE,
     };
   },
   methods: {
