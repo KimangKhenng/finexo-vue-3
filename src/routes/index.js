@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-const Home = () => import('"@/pages/Home.vue"')
+const Home = () => import("@/pages/Home.vue")
 const About = () => import("@/pages/About.vue")
 const Team = () => import("@/pages/Team/Team.vue")
 const TeamComponent = () => import("@/components/Team.vue")
