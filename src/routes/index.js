@@ -1,17 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router"
 
-import Home from "@/pages/Home.vue"
-import About from "@/pages/About.vue"
-import Team from "@/pages/Team/Team.vue"
-import TeamComponent from "@/components/Team.vue"
-import TeamMember from "@/pages/Team/TeamMember.vue"
-import Services from "@/components/Services.vue"
-import Course from "@/pages/courses/index.vue"
-import CoursePage from '@/pages/courses/CoursePage.vue'
-import Login from "@/pages/login.vue"
-import Repository from '@/pages/Repository.vue'
-import Register from '@/pages/Register.vue'
-import NotFound from '@/components/NotFound.vue'
+const Home = () => import('"@/pages/Home.vue"')
+const About = () => import("@/pages/About.vue")
+const Team = () => import("@/pages/Team/Team.vue")
+const TeamComponent = () => import("@/components/Team.vue")
+const TeamMember = () => import("@/pages/Team/TeamMember.vue")
+const Services = () => import("@/components/Services.vue")
+const Course = () => import("@/pages/courses/index.vue")
+const CoursePage = () => import('@/pages/courses/CoursePage.vue')
+const Login = () => import("@/pages/login.vue")
+const Repository = () => import('@/pages/Repository.vue')
+const Register = () => import('@/pages/Register.vue')
+const NotFound = () => import('@/components/NotFound.vue')
 
 const routes = [
     { path: '/', component: Home },
